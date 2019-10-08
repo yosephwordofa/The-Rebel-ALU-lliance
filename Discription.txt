@@ -1,0 +1,16 @@
+
+Topic Complexity
+
+build a system in a Hardware Design language, such as Verilog. The system has to be complex enough to satisfy the instructor. How complex? The basic problem is the Arithmetic Logic Unit. Create a simulated system that creates a reasonable number of inputs and outputs. How do you know? They would be from the definitions. Think about the problem, let’s look at an ALU. 
+
+The ALU typically has the current value, and one or more input values, and a current operation. The current operation could be logical or mathematical, single value or multi-value. In fact, it has multiple combinations for multiple states.
+
+For example, 
+•	The ALU can have two modes, Arithmetic and Logic. (4 items) 
+•	With four math operations (2 bits), add, subtract, multiply, divide. (4 items) 
+•	And with four logic operations (2 bits), and, or, not, xor. (4 items)
+•	And then inputs… binary operations have 2 inputs, unary operations have one. So, these must be of some form of size. (2x16 Bits)  (2 items)
+•	There would be some current value, called an accumulator, which could go to 32 bits. (1 item)
+•	And there would be the current output. (1 item)
+•	And there can be error states, such as an overflow/carry error, a divide by zero error, or other warning state. (At least 2 items)
+•	And there is probably a reset or clear command (another item)
