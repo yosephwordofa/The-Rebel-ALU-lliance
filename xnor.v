@@ -1,4 +1,3 @@
-// Nicholas Dobmeier
 // using:    Icarus Verilog
 // source:   $ git clone https://github.com/steveicarus/iverilog.git
 // 4341.502
