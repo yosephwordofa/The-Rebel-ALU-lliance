@@ -1,0 +1,14 @@
+0000   no-op
+0001   and
+0010   nand
+0011   or
+0100   nor
+0101   xor
+0110   xnor
+0111   not
+1000   div
+1001   add
+1010   sub
+1011   mult
+1100   left shift
+1101   right shift
