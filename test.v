@@ -32,7 +32,7 @@ module mux_2to1(A,accum,select,result);
 
 endmodule
 
-module mux_14to1_case ( input [15:0] a0,        
+module mux_14to1 ( input [15:0] a0,        
                        input [15:0] a1,              
                        input [15:0] a2,                
                        input [15:0] a3,                 
@@ -484,7 +484,7 @@ DFFB #(16) accumulator(clk,rstwire,out,result);
 DFFB #(16) A_reg(clk,rstwire,muxAout,Awire);
 DFFB #(16) B_reg(clk,rstwire,B,Bwire);
 
-mux_14to1_case mymux(result,andwire,nandwire,orwire,norwire,xorwire,xnorwire,notwire,divwire,addwire,subwire,multwire,
+mux_14to1 mymux(result,andwire,nandwire,orwire,norwire,xorwire,xnorwire,notwire,divwire,addwire,subwire,multwire,
 					leftShiftwire,rightShiftwire,opwire,out);
 
 mux_2to1 muxA(A,result,loadwire,muxAout);
@@ -536,8 +536,11 @@ initial
 			begin
 			#10
 
-					$display("%b   |  %b  | %b | %b   |  %b   |  %b",clk, select, myALU.myadd.overflow, myALU.Awire, myALU.Bwire, myALU.myadd.sum);
-					$display("%b      %b    %b   %d      %d      %d",clk, select, myALU.myadd.overflow, myALU.Awire, myALU.Bwire, myALU.addwire);
+					$display("%b   |  %b  | %b | %b   |  %b   |  %b",clk, select, myALU.myadd.overflow, myALU.Awire, myALU.Bwire, out);
+					$display("%b      %b    %b   %d      %d      %d",clk, select, myALU.myadd.overflow, myALU.Awire, myALU.Bwire, out);
+					
+					//$display("%b   %b  %b   %b   %b",myALU.myadd.sum, myALU.addwire, myALU.mymux.a9, myALU.mymux.out, myALU.out);
+						//$display("       %b",myALU.mymux.sel);
 			
 			end
     end
@@ -570,7 +573,7 @@ initial
 		#10
 		select=4'b1001;					  // add operation
 		$display("                                                     add");
-		
+		#10
 
 
 
