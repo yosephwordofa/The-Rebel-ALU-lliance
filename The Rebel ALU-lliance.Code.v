@@ -1,3 +1,16 @@
+//  Filename         The Rebel ALU-lliance.Code.v
+//  Date             11/22/2019
+//  Authors          Joshua Segura
+//					 Nicholas Dobmeier
+//					 Yoseph Wordofa
+//					 Lesly Rodriguez
+//					 Brent Seitz
+//  
+//  Course           CS 4341.501 Spring 2019
+//  Source			 $ git clone https://github.com/steveicarus/iverilog.git
+//
+// Description: 16 bit alu with basic logical and mathematical operations with error detection
+
 module DFFB(clk,rst,in,out);
   
   input  clk;
