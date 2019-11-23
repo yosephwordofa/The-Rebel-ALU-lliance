@@ -1,0 +1,160 @@
+No-op
+Opcode:0000
+
+And
+Opcode:0001
+Number1:0000101101100010(  2914)
+Number2:0010100000010010( 10258)
+Result: 0000100000000010(  2050)
+State: Running
+
+No-op
+Opcode:0000
+
+Nand
+Opcode:0010
+Number1:0001111011010101(  7893)
+Number2:0000111111011101(  4061)
+Result: 1111000100101010( -3798)
+State: Running
+
+No-op
+Opcode:0000
+
+Or
+Opcode:0011
+Number1:0000001111001010(   970)
+Number2:0000111111111111(  4095)
+Result: 0000111111111111(  4095)
+State: Running
+
+No-op
+Opcode:0000
+
+Nor
+Opcode:0100
+Number1:0000000000111111(    63)
+Number2:0000001111100000(   992)
+Result: 1111110000000000( -1024)
+State: Running
+
+No-op
+Opcode:0000
+
+Xor
+Opcode:0101
+Number1:0000111010100000(  3744)
+Number2:0000001100001000(   776)
+Result: 0000110110101000(  3496)
+State: Running
+
+No-op
+Opcode:0000
+
+Xnor
+Opcode:0110
+Number1:0000011111001010(  1994)
+Number2:0000011111101010(  2026)
+Result: 1111111111011111(   -33)
+State: Running
+
+No-op
+Opcode:0000
+
+Not
+Opcode:0111
+Number1:0000000011111111(   255)
+Number2:0000000000000000(     0)
+Result: 1111111100000000(  -256)
+State: Running
+
+No-op
+Opcode:0000
+
+Divide
+Opcode:1000
+Number1:0000000000001001(     9)
+Number2:0000000000000011(     3)
+Result: 0000000000000011(     3)
+State: Running
+
+No-op
+Opcode:0000
+
+Addition
+Opcode:1001
+Number1:0000000000000101(     5)
+Number2:0000000000000011(     3)
+Result: 0000000000001000(     8)
+State: Running
+
+No-op
+Opcode:0000
+
+Subtraction
+Opcode:1010
+Number1:0000000000001000(     8)
+Number2:0000000000000011(     3)
+Result: 0000000000000101(     5)
+State: Running
+
+No-op
+Opcode:0000
+
+Multiplication
+Opcode:1011
+Number1:0000000000000101(     5)
+Number2:0000000000000100(     4)
+Result: 0000000000010100(    20)
+State: Running
+
+No-op
+Opcode:0000
+
+Shift Left
+Opcode:1100
+Number1:0000000000000111(     7)
+Number2:0000000000000000(     0)
+Result: 0000000000001110(    14)
+State: Running
+
+No-op
+Opcode:0000
+
+Shift Right
+Opcode:1101
+Number1:0000000100011100(   284)
+Number2:0000000000000000(     0)
+Result: 0000000010001110(   142)
+State: Running
+
+No-op
+Opcode:0000
+
+Division Error(Divide by Zero)
+Opcode:1000
+Number1:0000000000010000(    16)
+Number2:0000000000000000(     0)
+Result: xxxxxxxxxxxxxxxx(     x)
+State: Error
+
+No-op
+Opcode:0000
+
+Addition Error(Overflow)
+Opcode:1001
+Number1:0111111111111111( 32767)
+Number2:0111111111111111( 32767)
+Result: 1111111111111110(    -2)
+State: Error
+
+No-op
+Opcode:0000
+
+Subtraction Error(Overflow)
+Opcode:1010
+Number1:1000000000000000(-32768)
+Number2:0111111111111111( 32767)
+Result: 0000000000000001(     1)
+State: Error
+
